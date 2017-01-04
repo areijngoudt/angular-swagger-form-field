@@ -5,7 +5,9 @@
   "main": "components.ts",
   "scripts": {
     "build": "tsc",
-    "publish-patch": "tsc && npm version patch && npm publish"
+    "publish-patch": "tsc && npm version patch && npm publish",
+    "publish-minor": "tsc && npm version minor && npm publish",
+    "publish-major": "tsc && npm version major && npm publish"
   },
   "keywords": [
     "Swagger",
