@@ -1,7 +1,7 @@
 {
-  "name": "angular2-swagger-form-field",
+  "name": "angular-swagger-form-field",
   "version": "1.1.8",
-  "description": "Angular 2 (and above) module with some components to build a model-driven form using the generated classes from the swagger-ts-generator.",
+  "description": "Angular (2 and above) module with some components to build a model-driven form using the generated classes from the swagger-ts-generator.",
   "main": "components.ts",
   "scripts": {
     "build": "tsc",

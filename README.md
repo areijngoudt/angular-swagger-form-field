@@ -91,7 +91,7 @@ export class AppComponent {
 ```
 
 # Model driven form
-You can use the generated models to build a model driven Angular 2 form.
+You can use the generated models to build an Angular (2 and above) model driven form (aka reactive form).
 Each model contains a `$FormGroup` property. This property can be used in a component to create a model driven form 
 by feeding it to the FormBuilder:
 
