@@ -1,8 +1,10 @@
 # Angular2 Swagger FormField
 
-Angular 2 module with some components to build a model-driven form using the generated classes from the [SwaggerTSGenerator](https://www.npmjs.com/package/swagger-ts-generator).
-After you setup and executed the [SwaggerTSGenerator](https://www.npmjs.com/package/swagger-ts-generator), 
+Angular 2 (and above) module with some components to build a model-driven form using the generated classes from the [swagger-ts-generator](https://www.npmjs.com/package/swagger-ts-generator).
+After you setup and executed the [swagger-ts-generator](https://www.npmjs.com/package/swagger-ts-generator), 
 you can use the generated classes to build model driven forms using this module.
+
+See [angular2-swagger-form-field-sample](https://github.com/areijngoudt/angular2-swagger-form-field-sample) for a sample how to use the generated classes and the classes from this package.
 
 # Setup
 Download the module with npm:
