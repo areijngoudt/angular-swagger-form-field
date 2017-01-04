@@ -1,8 +1,8 @@
 CHANGELOG
 =========
 
-### 1.2.0
-Rename to angular-swagger-form-field
+### 1.1.9
+Depricated. Please use angular-swagger-form-field
 
 ### 1.1.8
 Link to angular2-swagger-form-field-sample in the readme
