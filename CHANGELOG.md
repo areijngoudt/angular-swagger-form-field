@@ -2,6 +2,9 @@ CHANGELOG
 =========
 
 ### 1.1.8
+Rename to angular-swagger-form-field
+
+### 1.1.8
 Link to angular2-swagger-form-field-sample in the readme
 
 ### 1.1.7

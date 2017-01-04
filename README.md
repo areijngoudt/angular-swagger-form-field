@@ -1,16 +1,16 @@
-# Angular2 Swagger FormField
+# Angular Swagger FormField
 
-Angular 2 (and above) module with some components to build a model-driven form using the generated classes from the [swagger-ts-generator](https://www.npmjs.com/package/swagger-ts-generator).
+Angular (2 and above) module with some components to build a model-driven form using the generated classes from the [swagger-ts-generator](https://www.npmjs.com/package/swagger-ts-generator).
 After you setup and executed the [swagger-ts-generator](https://www.npmjs.com/package/swagger-ts-generator), 
 you can use the generated classes to build model driven forms using this module.
 
-See [angular2-swagger-form-field-sample](https://github.com/areijngoudt/angular2-swagger-form-field-sample) for a sample how to use the generated classes and the classes from this package.
+See [angular-swagger-form-field-sample](https://github.com/areijngoudt/angular-swagger-form-field-sample) for a sample how to use the generated classes and the classes from this package.
 
 # Setup
 Download the module with npm:
 
 ```bash
-npm install --save angular2-swagger-form-field
+npm install --save angular-swagger-form-field
 ```
 
 If you use SystemJS, add the module in `systemjs.config.js`:
@@ -19,13 +19,13 @@ If you use SystemJS, add the module in `systemjs.config.js`:
     ...
     map: {
       ...
-      'angular2-swagger-form-field': 'npm:angular2-swagger-form-field/bundles'
+      'angular-swagger-form-field': 'npm:angular-swagger-form-field/bundles'
       ...
     },
 
     packages: {
       ...
-      'angular2-swagger-form-field': { defaultExtension: 'js' }
+      'angular-swagger-form-field': { defaultExtension: 'js' }
       ...
     }
 ```
@@ -34,7 +34,7 @@ Add the module to your AppModule:
 
 ```typescript
 ...
-import { SwaggerFormFieldModule } from 'angular2-swagger-form-field/components';
+import { SwaggerFormFieldModule } from 'angular-swagger-form-field/components';
 ...
 @NgModule({
   imports: [
@@ -195,7 +195,7 @@ The `validation-messages` class contains the validation messages to use:
 You can override a message by calling the `setValidationErrorMessage` method in AppComponent:
 
 ```typescript
-import { ValidationMessages } from 'angular2-swagger-form-field/components';
+import { ValidationMessages } from 'angular-swagger-form-field/components';
 ...
 export class AppComponent {
     constructor(...) {

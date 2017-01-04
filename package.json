@@ -11,6 +11,7 @@
     "Swagger",
     "Code Generator",
     "models",
+    "Angular",
     "Angular2",
     "Angular 2",
     "model-driven forms",
@@ -18,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/areijngoudt/angular2-swagger-form-field"
+    "url": "https://github.com/areijngoudt/angular-swagger-form-field"
   },
   "author": "Ad Reijngoudt <areijngoudt@gmail.com>",
   "license": "ISC",
