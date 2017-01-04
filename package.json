@@ -1,7 +1,7 @@
 {
-  "name": "angular-swagger-form-field",
-  "version": "1.2.0",
-  "description": "Angular (2 and above) module with some components to build a model-driven form using the generated classes from the swagger-ts-generator.",
+  "name": "angular2-swagger-form-field",
+  "version": "1.1.8",
+  "description": "DEPRICATED Angular 2 (and above) module with some components to build a model-driven form using the generated classes from the swagger-ts-generator.",
   "main": "components.ts",
   "scripts": {
     "build": "tsc",
@@ -10,14 +10,6 @@
     "publish-major": "tsc && npm version major && npm publish"
   },
   "keywords": [
-    "Swagger",
-    "Code Generator",
-    "models",
-    "Angular",
-    "Angular2",
-    "Angular 2",
-    "model-driven forms",
-    "reactive forms"
   ],
   "repository": {
     "type": "git",
