@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-### 1.1.8
+### 1.2.0
 Rename to angular-swagger-form-field
 
 ### 1.1.8
