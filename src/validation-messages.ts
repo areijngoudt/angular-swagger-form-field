@@ -12,7 +12,7 @@ export class ValidationMessages {
         'maxlength': 'Dit veld mag maximaal {{required}} karakters bevatten maar bevat er {{actual}}',
         'minValue': 'Dit veld mag minimaal {{required}} bevatten maar bevat {{actual}}',
         'maxValue': 'Dit veld mag maximaal {{required}} bevatten maar bevat {{actual}}',
-        'enum': 'Dit veld moet een waarde bevatten uit lijst {{required}} maar bevat {{actual}}',
+        'enum': 'Dit veld moet een waarde bevatten uit de lijst maar bevat {{actual}}',
         'email': 'Dit veld bevat een ongeldig email adres',
         'pattern': 'Dit veld bevat tenminste één ongeldig karakter (patroon is {{required}})',
     };
