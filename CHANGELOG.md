@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+### 1.2.3
+Support enum validation
+
 ### 1.2.0
 Renamed to angular-swagger-form-field-sample
 

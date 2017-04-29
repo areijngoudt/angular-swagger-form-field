@@ -46,6 +46,9 @@ export class ValidationMessagesComponent {
                     } else if (propertyName === 'maxValue') {
                         required = this.control.errors[propertyName].required.toString();
                         actual = this.control.errors[propertyName].actual.toString();
+                    } else if (propertyName === 'enum') {
+                        required = this.control.errors[propertyName].required.toString();
+                        actual = this.control.errors[propertyName].actual.toString();
                     }
 
                     // fill error message placeholders with the required and actual values
