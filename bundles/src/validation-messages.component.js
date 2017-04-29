@@ -58,6 +58,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
                                 required = this.control.errors[propertyName].required.toString();
                                 actual = this.control.errors[propertyName].actual.toString();
                             }
+                            else if (propertyName === 'enum') {
+                                required = this.control.errors[propertyName].required.toString();
+                                actual = this.control.errors[propertyName].actual.toString();
+                            }
                             // fill error message placeholders with the required and actual values
                             if (required) {
                                 message = message.replace('{{required}}', required);
