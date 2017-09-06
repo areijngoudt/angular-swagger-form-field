@@ -51,7 +51,8 @@ The contents of the generated enum language files can be used in ng2-translate t
 Include ngx-translate in the AppModule:
 
 ```typescript
-import { HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -66,6 +67,8 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
    ...
   imports: [
+    HttpModule,
+    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -75,6 +78,10 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     ...
   ],
+  providers: [
+    HttpClient,
+    ...
+  ],  
   ...
 })
 ...
