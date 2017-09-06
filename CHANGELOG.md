@@ -1,6 +1,9 @@
 CHANGELOG
 =========
 
+### 1.2.4
+Upgrade to Angular 4.3.3 and Angular/Cli 1.2.7
+
 ### 1.2.3
 Support enum validation
 

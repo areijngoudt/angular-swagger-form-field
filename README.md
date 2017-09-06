@@ -34,7 +34,7 @@ Add the module to your AppModule:
 
 ```typescript
 ...
-import { SwaggerFormFieldModule } from 'angular-swagger-form-field/components';
+import { SwaggerFormFieldModule } from 'angular-swagger-form-field';
 ...
 @NgModule({
   imports: [
@@ -48,26 +48,32 @@ import { SwaggerFormFieldModule } from 'angular-swagger-form-field/components';
 ## ng2-translate
 The contents of the generated enum language files can be used in ng2-translate to translate select-options in the UI.
 
-Include ng2-translate in the AppModule:
+Include ngx-translate in the AppModule:
 
 ```typescript
-import { 
-    TranslateModule, TranslateService, TranslateLoader, TranslateStaticLoader 
-} from 'ng2-translate/ng2-translate';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+// AoT requires an exported function for factories
+// export function HttpLoaderFactory(http: Http) {
+//   return new TranslateHttpLoader(http);
+// }
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 ...
 @NgModule({
    ...
   imports: [
     TranslateModule.forRoot({
-      provide: TranslateLoader,
-      useFactory: (http: Http) 
-        => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
-      deps: [Http]
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
     }),
     ...
-  ],
-  providers: [
-    TranslateService,
   ],
   ...
 })
@@ -77,16 +83,19 @@ import {
 Configure ng2-translate in the AppComponent:
 
 ```typescript
-import { TranslateService } from 'ng2-translate/ng2-translate';
+import { TranslateService } from '@ngx-translate/core';
 ...
 export class AppComponent {
     constructor(
         ...
         private translate: TranslateService,
         ...) {
-        translate.setDefaultLang('nl');
-        translate.use('nl');
-    }
+            // this language will be used as a fallback when a translation isn't found in the current language
+            translate.setDefaultLang('en');
+
+            // the lang to use, if the lang isn't available, it will use the current loader to get them
+            translate.use('en');
+        }
 }
 ```
 

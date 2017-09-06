@@ -4,20 +4,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 (function (factory) {
-    if (typeof module === 'object' && typeof module.exports === 'object') {
-        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === 'function' && define.amd) {
-        define(["require", "exports", '@angular/core'], factory);
+    else if (typeof define === "function" && define.amd) {
+        define(["require", "exports", "@angular/core"], factory);
     }
 })(function (require, exports) {
     "use strict";
-    var core_1 = require('@angular/core');
-    var EnumPipe = (function () {
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var core_1 = require("@angular/core");
+    var EnumPipe = /** @class */ (function () {
+        /**
+         * Pipe which transforms an enum definition to an array, e.g.
+         * export enum gender {
+         *     unknown = <any>"unknown",
+         *     male = <any>"male",
+         *     female = <any>"female",
+         * }
+         *
+         * is transformed to
+         * ["unknown", "male", "female"]
+         * @param {string} value enum definition
+         * @returns {string[]} array with enum values as strings
+         */
         function EnumPipe() {
         }
         EnumPipe.prototype.transform = function (value, args) {
@@ -31,8 +43,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
             return result;
         };
         EnumPipe = __decorate([
-            core_1.Pipe({ name: 'sfEnum' }), 
-            __metadata('design:paramtypes', [])
+            core_1.Pipe({ name: 'sfEnum' })
+            /**
+             * Pipe which transforms an enum definition to an array, e.g.
+             * export enum gender {
+             *     unknown = <any>"unknown",
+             *     male = <any>"male",
+             *     female = <any>"female",
+             * }
+             *
+             * is transformed to
+             * ["unknown", "male", "female"]
+             * @param {string} value enum definition
+             * @returns {string[]} array with enum values as strings
+             */
         ], EnumPipe);
         return EnumPipe;
     }());

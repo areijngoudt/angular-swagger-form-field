@@ -8,18 +8,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 (function (factory) {
-    if (typeof module === 'object' && typeof module.exports === 'object') {
-        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === 'function' && define.amd) {
-        define(["require", "exports", '@angular/core', '@angular/forms', './validation-messages'], factory);
+    else if (typeof define === "function" && define.amd) {
+        define(["require", "exports", "@angular/core", "@angular/forms", "./validation-messages"], factory);
     }
 })(function (require, exports) {
     "use strict";
-    var core_1 = require('@angular/core');
-    var forms_1 = require('@angular/forms');
-    var validation_messages_1 = require('./validation-messages');
-    var ValidationMessagesComponent = (function () {
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var core_1 = require("@angular/core");
+    var forms_1 = require("@angular/forms");
+    var validation_messages_1 = require("./validation-messages");
+    var ValidationMessagesComponent = /** @class */ (function () {
         function ValidationMessagesComponent() {
         }
         Object.defineProperty(ValidationMessagesComponent.prototype, "errorMessage", {
@@ -79,15 +81,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
             configurable: true
         });
         __decorate([
-            core_1.Input(), 
-            __metadata('design:type', forms_1.FormControl)
+            core_1.Input(),
+            __metadata("design:type", forms_1.FormControl)
         ], ValidationMessagesComponent.prototype, "control", void 0);
         ValidationMessagesComponent = __decorate([
             core_1.Component({
                 selector: 'sf-validation-messages',
                 template: "<div *ngIf=\"errorMessage !== null\" class=\"error\">{{errorMessage}}</div>"
-            }), 
-            __metadata('design:paramtypes', [])
+            })
+            /**
+             * This component shows a validation message when the attached control has at least one validation error.
+             * The validation messages are used from the ValidationMessages class.
+             */
+            ,
+            __metadata("design:paramtypes", [])
         ], ValidationMessagesComponent);
         return ValidationMessagesComponent;
     }());

@@ -1,16 +1,18 @@
 (function (factory) {
-    if (typeof module === 'object' && typeof module.exports === 'object') {
-        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === 'function' && define.amd) {
+    else if (typeof define === "function" && define.amd) {
         define(["require", "exports"], factory);
     }
 })(function (require, exports) {
     "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
     /**
      * Generic validation messages with placeholders, one per validation type.
      */
-    var ValidationMessages = (function () {
+    var ValidationMessages = /** @class */ (function () {
         function ValidationMessages() {
         }
         /**
@@ -38,7 +40,7 @@
             'maxlength': 'Dit veld mag maximaal {{required}} karakters bevatten maar bevat er {{actual}}',
             'minValue': 'Dit veld mag minimaal {{required}} bevatten maar bevat {{actual}}',
             'maxValue': 'Dit veld mag maximaal {{required}} bevatten maar bevat {{actual}}',
-            'enum': 'Dit veld moet een waarde bevatten uit lijst {{required}} maar bevat {{actual}}',
+            'enum': 'Dit veld moet een waarde bevatten uit de lijst maar bevat {{actual}}',
             'email': 'Dit veld bevat een ongeldig email adres',
             'pattern': 'Dit veld bevat tenminste één ongeldig karakter (patroon is {{required}})',
         };

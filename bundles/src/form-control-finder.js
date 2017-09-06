@@ -1,19 +1,21 @@
 (function (factory) {
-    if (typeof module === 'object' && typeof module.exports === 'object') {
-        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === 'function' && define.amd) {
-        define(["require", "exports", '@angular/forms'], factory);
+    else if (typeof define === "function" && define.amd) {
+        define(["require", "exports", "@angular/forms"], factory);
     }
 })(function (require, exports) {
     "use strict";
-    var forms_1 = require('@angular/forms');
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var forms_1 = require("@angular/forms");
     /**
      * The FormControlFinder tries to find a formControl in the given ngModelChildren.
      * The input element of a control must contain a formControlName directive.
      * If more than 1 control is found, the attached formControlName contents (the model's property name) must be the same (so the same validation rules are applicable).
      */
-    var FormControlFinder = (function () {
+    var FormControlFinder = /** @class */ (function () {
         function FormControlFinder() {
         }
         /**
